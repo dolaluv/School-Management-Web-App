@@ -23,7 +23,7 @@ if(isset($_POST['submit']))
 if ($_FILES['img']['size'] == 0 || $_FILES['img']['name'] == "" )
 {
     // cover_image is empty (and not an error)
- $result = $userdata->execute("UPDATE student set sname ='$sname',fname ='$fname',dob ='$dob',sex ='$sex'  "); 
+ $result = $userdata->execute("UPDATE student set sname ='$sname',fname ='$fname',dob ='$dob',sex ='$sex' where std_id = '$std'  "); 
      
   }
   else
@@ -32,7 +32,7 @@ if ($_FILES['img']['size'] == 0 || $_FILES['img']['name'] == "" )
      unlink("student_image/".$MyImageName);
 
   move_uploaded_file($_FILES['img']['tmp_name'], $path_to_file);
-   $result = $userdata->execute("UPDATE student set sname ='$sname', image = '$imageName',fname ='$fname',dob ='$dob',sex ='$sex'    "); 
+   $result = $userdata->execute("UPDATE student set sname ='$sname', image = '$imageName',fname ='$fname',dob ='$dob',sex ='$sex'  where std_id = '$std'  "); 
     
   }
 
