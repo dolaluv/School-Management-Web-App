@@ -57,7 +57,7 @@ $std = mysqli_fetch_array($userdata->find("SELECT * FROM student where std_id = 
 
 <div   style="margin-left:15px;"><span  ><div class="lwidth">Name</div></span><label class="form-control" style="width:400px"><?php echo $std['sname'].", ".$std['fname']; ?></label></div>
 
-<div   style="margin-left:15px;"><span  ><div class="lwidth">Class</div></span><label class="form-control" style="width:400px"><?php echo $std['class'].$std['grp']; ?></label></div><br><br>
+ 
 
 <table class="table table-responsive table-striped table-condensed"><thead>
         <tr><th>Sn</th>
